@@ -14,7 +14,6 @@ public class Message {
     private String text;
     private String tag;
 
-
     public Message() {
     }
 
