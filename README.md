@@ -1,2 +1,2 @@
 # sweater
-Spring app with Spring Security, JPA, Postgres DB
+Spring app with Spring Security, JPA, Postgres DB, RabbitMQ
