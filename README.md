@@ -3,7 +3,7 @@
 ### Technologies used
 
 ```
-Spring app with Spring Security, JPA, Postgres DB, RabbitMQ, Docker
+Spring app with Spring Security, JPA, Postgres DB, RabbitMQ, Docker, Mustache
 ```
 
 ### Example of json for RabbitMQ
