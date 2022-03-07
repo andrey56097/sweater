@@ -20,7 +20,7 @@ public class TodoServiceImpl implements TodoService {
 
     @Override
     public TodoDto createTodo(Todo todo, Long managerId) {
-        Manager manager = managerRepo.findById(managerId).orElseThrow(() -> new NoEntityException(managerId));;
+        Manager manager = managerRepo.findById(managerId).orElseThrow(() -> new NoEntityException(managerId));
         todo.setManager(manager);
         return TodoDto.toDto(todoRepo.save(todo));
     }

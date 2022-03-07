@@ -3,6 +3,7 @@ services:
     rabbitmq3:
         container_name: "rabbitmq"
         image: rabbitmq:3.8-management-alpine
+        restart: always
         environment:
             - RABBITMQ_DEFAULT_USER=guest
             - RABBITMQ_DEFAULT_PASS=guest
@@ -11,3 +12,15 @@ services:
             - '5672:5672'
             # HTTP management UI
             - '15672:15672'
+
+    postgres:
+        image: postgres:13.3
+        restart: always
+        environment:
+            POSTGRES_DB: "sweater"
+            POSTGRES_USER: "postgres"
+            POSTGRES_PASSWORD: "root"
+        volumes:
+            - .:/docker-entrypoint-initdb.d
+        ports:
+            - "5432:5432"
